@@ -24,12 +24,6 @@ overviewSnapshots: true
 
 Les indicateurs existants
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
@@ -39,18 +33,18 @@ Les indicateurs existants
 
 ---
 transition: fade-out
-layout: default
+layout: center
 ---
 
-# Pourquoi construire des tableaux de bord ? (Méthode des 5 Pourquoi)
+# Pourquoi construire des tableaux de bord ?
 
-1. Répondre à une demande grandissante
-2. Obtenir une nouvelle connaissance dédiée sur le suivi et l'activité des cours
-3. Etre en capacité de monitorer ou de prendre des décisions sur les cours
-   (pour toutes les personnes concernées: apprenants, enseignants, équipes
-   pédagogiques, administrateurs)
-4. Remplir les objectifs liés à chaque rôle de l'apprentissage en ligne
-5. Assurer la réussite de l'apprentissage en ligne
+1. Répondre à une demande accrue de suivi des cours en ligne
+2. Acquérir des insights précis sur l'activité des cours et leur suivi
+3. Permettre à toutes les parties prenantes de monitorer et de prendre des décisions
+   informées sur les cours.
+4. Aligner les actions sur les objectifs spécifiques de chaque acteur dans
+   l'apprentissage en ligne
+5. Maximiser la réussite et l'efficacité de l'apprentissage en ligne
 
 <!-- Objectif: Présenter les indicateurs que FUN propose aujourd'hui dans ses différentes
 activités
@@ -101,8 +95,6 @@ image: ./dimensions.png
 backgroundSize: 45%
 ---
 
-Dimensions impliquées
-
 ---
 transition: fade-out
 layout: image
@@ -110,61 +102,53 @@ image: ./metiers.png
 backgroundSize: 45%
 ---
 
-Rôles chez FUN
+---
+transition: fade-out
+layout: section
+---
+
+# 🏭
+# Construire l'outil de learning analytics de FUN
+
+---
+transition: fade-out
+layout: default
+---
+
+## Étapes clés pour la mise en place des tableaux de bord
+
+![Stack Analytics](./stack-analytics.png)
+
+## Avantages des choix techniques
+
+* Interopérabilité et standardisation
+* Collecte et analyse en temps réel
+* Flexibilité et évolutivité
 
 ---
 transition: fade-out
 layout: section
 ---
 
-# Brique 1. Construire la stack de learning analytics de FUN
+# 📈
+# Calculer et définir les indicateurs pédagogiques
 
 ---
 transition: fade-out
 layout: default
 ---
 
-## Description (titre à changer)
+## Bibliothèque d'indicateurs par ressource pédagogique
 
-* Identifier les **types de données** à collecter (LMS, Marsha, Ashley, Joanie, Richie...)
-* Mettre en place un **mécanisme de récolte** des données
-* Ingérer les données (Ralph)
-* Calculer les indicateurs (Warren)
-* Servir des tableaux de bord (Warren)
-
----
-transition: fade-out
-layout: default
----
-
-## Choix techniques
-
-* Utilisation du standard xAPI pour formaliser **les données d'activités**
-* Emission des données via des **loggers**
-* Utilisation de la spécification LRS pour le **stockage des données** (Ralph)
-* Développement d'une bibliothèque dédiée pour le calcul des indicateurs
-* Développement de composants frontends dédiés pour la visualisation des indicateurs
-
-> Note: Présenter les avantages des choix techniques pour le public de FUN et la
-culture open source de développement chez FUN
-
----
-transition: fade-out
-layout: section
----
-
-# Brique 2. Calculer les indicateurs (Backend Warren)
-
----
-transition: fade-out
-layout: default
----
-
-## Description (titre à changer)
-
-* Système de plugins dédiés par type de ressource pédagagogique
+* Système de plugins dédiés par type de ressource pédagogique
 * Calcul réalisé sur des données xAPI générés depuis la ressource concernée par
   le plugin 
+
+```bash
+$ pip install warren-video
+
+$ npm i @openfun/warren-video
+```
 
 ## Exemple. Plugin `document`
 
@@ -182,14 +166,15 @@ transition: fade-out
 layout: section
 ---
 
-# Brique 3. Définir les indicateurs
+# 💬
+# Récolter les besoins utilisateurs
 
 ---
 transition: fade-out
-layout: default
+layout: section
 ---
 
-## Description (titre à changer)
+## Co-construction avec les utilisateurs finaux
 
 * Groupe de travail
 * Co-construction avec le recueil des besoins 
@@ -198,24 +183,14 @@ layout: default
 
 ---
 transition: fade-out
-layout: default
+layout: section
 ---
 
-## En pratique: 2 applications métiers différentes
-
-1. Formation professionnelle
-2. Formation initiale
+## Quels indicateurs pour la formation initiale ? 
 
 ---
 transition: fade-out
-layout: default
+layout: section
 ---
 
-## Formation initiale
-
----
-transition: fade-out
-layout: default
----
-
-## Formation professionnelle
+## Quels indicateurs pour la formation professionnelle ?
