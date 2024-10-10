@@ -117,7 +117,7 @@ layout: default
 
 ## Étapes clés pour la mise en place des tableaux de bord
 
-![Stack Analytics](./stack-analytics.png)
+![Stack Analytics](./public/stack-analytics.png)
 
 ## Avantages des choix techniques
 
