@@ -6,6 +6,7 @@ theme: seriph
 # background:
 # some information about your slides (markdown enabled)
 title: Les tableaux de bord pédagogiques chez FUN
+author: Quitterie Lucas & Alexandra Oudot (FUN)
 # info: 
 # apply unocss classes to the current slide
 class: text-center
@@ -29,6 +30,10 @@ Les indicateurs existants
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
+</div>
+
+<div class="author">
+  Quitterie Lucas & Alexandra Oudot (FUN) | Les Quartiers du Numérique | 11 octobre 2024
 </div>
 
 ---
@@ -138,28 +143,40 @@ transition: fade-out
 layout: default
 ---
 
-## Bibliothèque d'indicateurs par ressource pédagogique
+## Indicateurs par ressource pédagogique
 
-* Système de plugins dédiés par type de ressource pédagogique
-* Calcul réalisé sur des données xAPI générés depuis la ressource concernée par
-  le plugin 
+**Plugin Python pour le calcul des indicateurs**
 
 ```bash
 $ pip install warren-video
+```
+<br>
 
+```bash
+$ warren indicator list
+
+> warren_video.indicators:DailyCompletedViews
+> warren_video.indicators:DailyDownloads
+> warren_video.indicators:DailyUniqueCompletedViews
+> warren_video.indicators:DailyUniqueDownloads
+> warren_video.indicators:DailyUniqueViews
+> warren_video.indicators:DailyViews
+```
+
+**Packages NPM pour les visualisations des indicateurs**
+
+```bash
 $ npm i @openfun/warren-video
 ```
 
-## Exemple. Plugin `document`
+---
+transition: fade-out
+layout: image
+image: ./tdbp-video.png
+backgroundSize: 80%
+---
 
-- Indicateurs de téléversement et de téléchargement des documents sur une
-  plateforme
-- Données requêtées sont générées par cette plateforme et respectent la syntaxe
-  du profil xAPI `document`
-- Composants frontend de vue quotidienne de téléchargements, de nombre de
-  personnes ayant téléchargés les documents pour un cours...
-
-> Ajouter visuels
+## Tableau de bord vidéo (V1)
 
 ---
 transition: fade-out
@@ -171,26 +188,63 @@ layout: section
 
 ---
 transition: fade-out
-layout: section
+layout: center
 ---
 
-## Co-construction avec les utilisateurs finaux
+## A vous ! ✏️
 
-* Groupe de travail
-* Co-construction avec le recueil des besoins 
-
-*A developper*
+*Lors de cet atelier, vous allez concevoir tous ensemble un tableau de bord.*
 
 ---
 transition: fade-out
-layout: section
+layout: center
 ---
 
-## Quels indicateurs pour la formation initiale ? 
+* A quoi servent les tableaux de bord pédagogiques dans votre métier ? 
+
+* Quels indicateurs répondent aux objectifs liés à votre métier ?
+
+* Quelles ressources pédagogiques sont utiles à observer, selon vous ?
 
 ---
 transition: fade-out
-layout: section
+layout: end
 ---
 
-## Quels indicateurs pour la formation professionnelle ?
+# 🙏 
+
+# Merci et à bientôt !
+
+<br>
+
+👇 *Scannez les QR codes ci-dessous* 👇
+
+<br>
+
+<div class="grid grid-cols-2 gap-3 credits">
+  <div style="text-align: center;">
+    <a href="https://openfun.github.io/2024-quartier-numerique-tdbp/">
+      Slides
+    </a>
+    <br/>
+    <img style="max-width: 90%;" src="/qr-code-slides.png" />
+  </div>
+  <div style="text-align: center;">
+    <a href="https://openfun.github.io/warren/dev/">
+      Warren
+    </a>
+    <br/>
+    <img style="max-width: 90%;" src="/qr-code-warren.png" />
+  </div>
+</div>
+
+<style>
+.credits {
+  margin-top: 1rem;
+  text-align: center;
+}
+.logo {
+  display: block;
+  margin: 1rem auto 0;
+}
+</style>
