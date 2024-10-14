@@ -19,6 +19,7 @@ transition: slide-left
 mdc: true
 # take snapshot for each slide in the overview
 overviewSnapshots: true
+colorSchema: light
 ---
 
 # Les tableaux de bord pédagogiques chez FUN
@@ -96,7 +97,7 @@ backgroundSize: 80%
 ---
 transition: fade-out
 layout: image
-image: ./dimensions.png
+image: ./domaines.png
 backgroundSize: 45%
 ---
 
@@ -145,14 +146,14 @@ layout: default
 
 ## Indicateurs par ressource pédagogique
 
-**Plugin Python pour le calcul des indicateurs**
+Distribués par le projet [Warren](https://github.com/openfun/warren)
+
+Exemple du plugin video
+
+1. **[Plugin Python](https://pypi.org/project/warren-video/) pour le calcul des indicateurs**
 
 ```bash
 $ pip install warren-video
-```
-<br>
-
-```bash
 $ warren indicator list
 
 > warren_video.indicators:DailyCompletedViews
@@ -162,13 +163,13 @@ $ warren indicator list
 > warren_video.indicators:DailyUniqueViews
 > warren_video.indicators:DailyViews
 ```
+<br>
 
-**Packages NPM pour les visualisations des indicateurs**
+2. **[Package NPM](https://www.npmjs.com/package/@openfun/warren-video) pour les visualisations des indicateurs**
 
 ```bash
 $ npm i @openfun/warren-video
 ```
-
 ---
 transition: fade-out
 layout: image
@@ -177,6 +178,49 @@ backgroundSize: 80%
 ---
 
 ## Tableau de bord vidéo (V1)
+
+---
+transition: fade-out
+layout: default
+---
+
+## Créez vos tableaux de bord avec Warren ! 
+
+Exemple du [projet TdbP](https://github.com/apui-avignon-university/warren-tdbp) impulsé par l'Université d'Avignon
+
+* Projet hébergé dans un repository Github dédié
+* Utilisation des images Docker `core` de Warren (`api` pour créer les
+  indicateurs et `app` pour créer les dataviz)
+* Développement d'un plugin dédié
+
+<br>
+
+```bash
+$ warren indicator list
+
+> warren_tdbp.indicators:SlidingWindowIndicator
+> warren_tdbp.indicators:CohortIndicator
+> warren_tdbp.indicators:ScoresIndicator
+> warren_tdbp.indicators:GradesIndicator
+```
+
+---
+transition: fade-out
+layout: image
+image: ./vue-eleve-tdbp.png
+backgroundSize: 90%
+---
+
+## Vue élève
+
+---
+transition: fade-out
+layout: image
+image: ./vue-enseignant-tdbp.png
+backgroundSize: 80%
+---
+
+## Vue enseignant
 
 ---
 transition: fade-out
@@ -208,6 +252,32 @@ layout: center
 
 ---
 transition: fade-out
+layout: center
+---
+
+<div class="grid grid-cols-1 gap-3 credits">
+  <div style="text-align: center;">
+    <a href="https://miro.com/app/board/uXjVLTWBVLU=/?share_link_id=960986370764">
+      👇 Scannez le QR ci-dessous pour accéder au tableau Miro de l'atelier 👇
+    </a>
+    <br/>
+    <img class="centered-image" style="max-width: 50%;" src="/qr-code-miro.png" />
+  </div>
+</div>
+
+<style>
+.credits {
+  margin-top: 1rem;
+  text-align: center;
+}
+.centered-image {
+  display: block;
+  margin: 1rem auto; /* Marges automatiques pour centrer horizontalement */
+}
+</style>
+
+---
+transition: fade-out
 layout: end
 ---
 
@@ -217,24 +287,16 @@ layout: end
 
 <br>
 
-👇 *Scannez les QR codes ci-dessous* 👇
+👇 *Scannez les QR codes ci-dessous pour retrouver les slides* 👇
 
 <br>
 
-<div class="grid grid-cols-2 gap-3 credits">
+<div class="grid grid-cols-1 gap-3 credits">
   <div style="text-align: center;">
     <a href="https://openfun.github.io/2024-quartier-numerique-tdbp/">
-      Slides
     </a>
     <br/>
-    <img style="max-width: 90%;" src="/qr-code-slides.png" />
-  </div>
-  <div style="text-align: center;">
-    <a href="https://openfun.github.io/warren/dev/">
-      Warren
-    </a>
-    <br/>
-    <img style="max-width: 90%;" src="/qr-code-warren.png" />
+    <img class="centered-image" style="max-width: 30%;" src="/qr-code-miro.png" />
   </div>
 </div>
 
@@ -243,8 +305,8 @@ layout: end
   margin-top: 1rem;
   text-align: center;
 }
-.logo {
+.centered-image {
   display: block;
-  margin: 1rem auto 0;
+  margin: 1rem auto; /* Marges automatiques pour centrer horizontalement */
 }
 </style>
