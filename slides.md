@@ -34,7 +34,7 @@ Les indicateurs existants
 </div>
 
 <div class="author">
-  Quitterie Lucas & Alexandra Oudot (FUN) | Les Quartiers du Numérique | 11 octobre 2024
+  Quitterie Lucas & Alexandra Oudot (FUN) | Les Quartiers du Numérique | 15 octobre 2024
 </div>
 
 ---
